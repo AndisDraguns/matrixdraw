@@ -65,3 +65,15 @@ def plot(matrix: NDArray, **kwargs: Any) -> str:  # type: ignore
     return html_str
 
 # matrix = str_to_matrix('[[1, 2, 3], [4, -5, 6], [7, 8, 9]]')
+
+
+def matrix_to_html(matrix: Matrix) -> str:
+    buffer = BytesIO()
+    matrix.save(buffer)
+    buffer.seek(0)
+    buffer_val = buffer.getvalue()
+    if matrix.conf.raster:
+        img_str = base64.b64encode(buffer_val).decode('utf-8')
+        return f'<img src="data:image/png;base64,{img_str}" />'
+    else:
+        return buffer_val.decode('utf-8')
