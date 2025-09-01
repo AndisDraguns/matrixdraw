@@ -24,7 +24,7 @@ def interference_pattern(n_sines: int = 5, size: int = 50) -> NDArray[Any]:
 
 def draw_interference_pattern():
     array = interference_pattern()
-    config = PlotConfig(color=Color('RdBu', 0.1))
+    config = PlotConfig(size=7, color=Color('RdBu', 0.1))
     mplot = Matrix(array, config)
     mplot.save("pattern.svg")
 
