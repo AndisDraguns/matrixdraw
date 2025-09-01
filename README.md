@@ -1,7 +1,7 @@
 # matrixdraw
 Matrix visualization with seamless vector graphics
 
-![](./matrixdraw/examples/pattern.svg)
+![](https://raw.githubusercontent.com/AndisDraguns/matrixdraw/refs/heads/main/matrixdraw/examples/pattern.svg)
 
 Installation:
 ```bash
